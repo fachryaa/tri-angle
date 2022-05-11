@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tri-Angle</title>
+
+  <link rel="stylesheet" href="assets\styles\style.css">
+  <link rel="shortcut icon" href="assets\images\ico.ico">
+</head>
+
+<body>
+  <header>
+    <span class="image-clickable">
+      <a href="index.html">
+        <img src="assets\images\tri-angle.png" alt="logo" class="logo">
+      </a>
+    </span>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#beranda">Beranda</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Kalkulator</a>
+          <div class="dropdown-content">
+            <a href="#menghitung-luas">Menghitung Luas</a>
+            <a href="#mencari-sisi">Mencari Sisi</a>
+            <a href="#mencari-sudut">Mencari Sudut</a>
+          </div>
+        </li>
+        <li><a href="#about">About me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div id="content" class="flex-container-column">
+      <article id="beranda" class="flex-container-row card">
+        <div class="flex-container-column flex-dir-row">
+          <div class="flex-container-row">
+            <h1>Kalkulator Segitiga <br>
+              <span><a href="#menghitung-luas">Menghitung Luas Segitiga, </a></span><br>
+              <span><a href="#mencari-sisi">Mencari sisi,</a></span> <br>
+              <span><a href="#mencari-sudut">Mencari sudut.</a></span>
+            </h1>
+          </div>
+          <div class="flex-container-row">
+            <img src="assets\images\ta-image.png" alt="ta-image" class="ta-image">
+          </div>
+        </div>
+      </article>
+
+      <article id="menghitung-luas" class="flex-container-row card">
+        <div class="flex-container-row">
+          <table>
+            <caption>Menghitung Luas</caption>
+            <tr>
+              <th>Alas</th>
+              <td>
+                <input type="number" id="luas-alas">
+              </td>
+              <td>cm</td>
+            </tr>
+            <tr>
+              <th>Tinggi</th>
+              <td>
+                <input type="number" id="luas-tinggi">
+              </td>
+              <td>cm</td>
+            </tr>
+            <tr>
+              <th>Luas</th>
+              <td>
+                <span id="hasil-luas">0</span>
+                <span> cm<sup>2</sup></span>
+              </td>
+              <td>
+                <button onclick="hitungLuas()">Hitung</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="flex-container-row">
+          <img src="assets\images\tri-angle-luas.png" alt="segitiga" class="segitiga">
+        </div>
+        <div class="flex-container-row flex-dir-col">
+          <h1 class="rumus">Rumus</h1>
+          <p>Luas = 1/2 x a x t</p>
+        </div>
+      </article>
+
+      <article id="mencari-sisi" class="flex-container-row card">
+        <div class="flex-container-row">
+          <table>
+            <caption>Mencari Sisi</caption>
+            <tr>
+              <th>a</th>
+              <td>
+                <input type="number" id="sisi-a">
+              </td>
+              <td>cm</td>
+            </tr>
+            <tr>
+              <th>b</th>
+              <td>
+                <input type="number" id="sisi-b">
+              </td>
+              <td>cm</td>
+            </tr>
+            <tr>
+              <th>c</th>
+              <td>
+                <span id="hasil-sisi">0</span>
+                <span> cm</span>
+              </td>
+              <td>
+                <button onclick="hitungSisi()">Hitung</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="flex-container-row">
+          <img src="assets\images\tri-angle-sisi.png" alt="segitiga" class="segitiga">
+        </div>
+        <div class="flex-container-row flex-dir-col">
+          <h1 class="rumus">Rumus</h1>
+          <p class="rumus">a = &radic;b<sup>2</sup> + c<sup>2</sup></p>
+          <p class="rumus">b = &radic;a<sup>2</sup> + c<sup>2</sup></p>
+          <p class="rumus">c = &radic;a<sup>2</sup> + b<sup>2</sup></p>
+        </div>
+      </article>
+
+      <article id="mencari-sudut" class="flex-container-row card">
+        <div class="flex-container-row">
+          <table>
+            <caption>Mencari Sudut</caption>
+            <tr>
+              <th>a</th>
+              <td>
+                <input type="number" id="sudut-a">
+              </td>
+              <td>&deg;</td>
+            </tr>
+            <tr>
+              <th>b</th>
+              <td>
+                <input type="number" id="sudut-b">
+              </td>
+              <td>&deg;</td>
+            </tr>
+            <tr>
+              <th>c</th>
+              <td>
+                <span id="hasil-sudut">0</span>
+                <span>&deg;</span>
+              </td>
+              <td>
+                <button onclick="hitungSudut()">Hitung</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="flex-container-row">
+          <img src="assets\images\tri-angle-sudut.png" alt="segitiga" class="segitiga">
+        </div>
+        <div class="flex-container-row flex-dir-col">
+          <h1 class="rumus">Rumus</h1>
+          <p>c = 180&deg; - a - b</p>
+        </div>
+      </article>
+
+      <aside>
+        <article class="profile card">
+          <h1>About me</h1>
+          <img src="assets/images/profile.jpg" alt="profile">
+
+          <section>
+            <table>
+              <tr>
+                <th>Nama</th>
+                <td>Fachry Ananta</td>
+              </tr>
+              <tr>
+                <th>TTL</th>
+                <td>Batang, 18 Desember 2001</td>
+              </tr>
+              <tr>
+                <th>Universitas</th>
+                <td>Universitas Brawijaya</td>
+              </tr>
+              <tr>
+                <th>Prodi</th>
+                <td>Teknik Komputer</td>
+              </tr>
+            </table>
+          </section>
+        </article>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <p>Belajar Dasar Pemrograman Web &#169; 2022, Fachry Ananta</p>
+  </footer>
+
+  <script src="assets\script\script.js">
+
+  </script>
+</body>
+
+</html>
